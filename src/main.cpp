@@ -64,11 +64,14 @@ int main ()
             cout << "\n\nPRESS ANY KEY TO RETURN TO MENU";
             getch();
             system("cls");
+        break;
         default:
             cout << "INVALID OPTION";
             break;
         }
     }
+
+    return 0;
 }
 
 void getMenu()
