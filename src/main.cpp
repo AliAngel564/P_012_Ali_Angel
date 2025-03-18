@@ -1,4 +1,10 @@
-
+/*
+AMERIKE UNIVESITY
+Author: Ali Angel
+Work #: 12
+Date: 17/03/25
+Description: This program will use functions to work as a calculator and allow the user to perform different mathematical processes
+*/
 
 
 #include <iostream>
@@ -11,13 +17,14 @@ void getMenu();
 void getSqrNumber(float a);
 float getCubedNumber(float a);
 float getSquareRoot(float a);
+float getAbsValue(float a);
 
-//cout << setprecision(15) << double();
+
 
 int main () 
 {
     int opt = 1;
-    int usrNumber;
+    float usrNumber;
 
     while( opt != 9)
     {
@@ -49,6 +56,14 @@ int main ()
             cout << "\n\nPRESS ANY KEY TO RETURN TO MENU";
             getch();
             system("cls");
+        break;
+        case 4:
+            cout << "write the number you would like to get the absolute value of: ";
+            cin >> usrNumber;
+            cout << "\nThe absolute value of your number is " << getAbsValue(usrNumber);
+            cout << "\n\nPRESS ANY KEY TO RETURN TO MENU";
+            getch();
+            system("cls");
         default:
             cout << "INVALID OPTION";
             break;
@@ -64,17 +79,23 @@ void getMenu()
 
 void getSqrNumber(float a)
 {
-    int numberSquared;
+    float numberSquared;
     numberSquared = a*a;
-    cout << "Your number squared is: " << numberSquared;
+    cout << "\nYour number squared is " << numberSquared;
 }
 float getCubedNumber(float a)
 {
-    int numberCubed;
+    float numberCubed;
     numberCubed = a*a*a;
     return numberCubed;
 }
 float getSquareRoot(float a)
 {
-    int squareRoot = sqrt(a); 
+    float squareRoot = sqrt(a); 
+    return squareRoot;
+}
+float getAbsValue(float a)
+{
+    float absoluteValue = abs(a); 
+    return absoluteValue;
 }
